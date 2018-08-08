@@ -1,6 +1,6 @@
 description = 'StreamSets Data Collector Apache Pulsar 2.0.1-incubating Lib'
 
-def pulsarVersion = '2.0.1-incubating'
+def pulsarVersion = '2.1.0-incubating'
 dependencies {
   compile project(':lib:proto:pulsar-protolib')
   compile group: 'org.apache.pulsar', name: 'pulsar-client', version: pulsarVersion
