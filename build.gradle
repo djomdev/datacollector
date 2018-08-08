@@ -244,3 +244,10 @@ distributions {
 
 // ensure building the UI before we start packaging
 coreDistTar.dependsOn ':ui:datacollector-ui:build'
+
+// create an aggregated test report
+task testReport(type: TestReport) {
+  destinationDir = file("$buildDir/reports/allTests")
+  // Include all test tasks from subprojects as well as our avroToOrcTest special case
+  reportOn subprojects*.test
+}
